@@ -1,0 +1,62 @@
+{
+  "id": "nodebb-plugin-haa9-experience",
+  "name": "HAA9 Experience",
+  "description": "Modern category index, topic list cards, topic detail UI, translation, voice compression, and batch cached media hydration for NodeBB.",
+  "url": "https://github.com/Hurt6465-ai/nodebb-plugin-haa9-experience",
+  "library": "./library.js",
+  "staticDirs": {
+    "images": "public/images"
+  },
+  "scripts": [
+    "public/js/client.js",
+    "public/js/x-translate-tools.js",
+    "public/js/category-index.js",
+    "public/js/haa9-category.js",
+    "public/js/x-topic-detail.js"
+  ],
+  "acpScripts": [
+    "public/js/admin.js"
+  ],
+  "scss": [
+    "public/scss/x-translate-tools.scss",
+    "public/scss/category-index.scss",
+    "public/scss/haa9-category.scss",
+    "public/scss/x-topic-detail.scss"
+  ],
+  "templates": "templates",
+  "languages": "languages",
+  "defaultLang": "zh-CN",
+  "hooks": [
+    {
+      "hook": "static:app.load",
+      "method": "init"
+    },
+    {
+      "hook": "filter:admin.header.build",
+      "method": "addAdminNavigation"
+    },
+    {
+      "hook": "action:post.save",
+      "method": "clearCacheOnPost"
+    },
+    {
+      "hook": "action:post.edit",
+      "method": "clearCacheOnPost"
+    },
+    {
+      "hook": "action:post.delete",
+      "method": "clearCacheOnPost"
+    },
+    {
+      "hook": "action:topic.save",
+      "method": "clearCacheOnTopic"
+    },
+    {
+      "hook": "action:topic.delete",
+      "method": "clearCacheOnTopic"
+    }
+  ],
+  "nbbpm": {
+    "compatibility": "^3.0.0 || ^4.0.0"
+  }
+}
