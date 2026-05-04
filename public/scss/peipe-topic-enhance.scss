@@ -1,0 +1,146 @@
+.peipe-topic-avatar-wrap {
+  position: relative !important;
+  display: inline-block;
+}
+
+.peipe-topic-flag {
+  position: absolute;
+  left: -3px;
+  bottom: -2px;
+  z-index: 5;
+  font-size: 17px;
+  line-height: 1;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .22);
+  pointer-events: none;
+}
+
+.peipe-topic-langs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.peipe-lang-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  min-height: 18px;
+  padding: 1px 5px;
+  border-radius: 999px;
+  background: rgba(255, 209, 0, .16);
+  color: #735500;
+  font-size: 10.5px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.peipe-lang-row.learn {
+  background: rgba(219, 234, 254, .76);
+  color: #2563eb;
+}
+
+.peipe-lang-row b {
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.peipe-lang-row i {
+  font-style: normal;
+}
+
+.peipe-follow-btn {
+  margin-left: 6px;
+  height: 22px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffe070, #ffc600);
+  color: #111827;
+  font-size: 11px;
+  font-weight: 850;
+  line-height: 22px;
+  vertical-align: middle;
+  box-shadow: 0 5px 14px rgba(255, 198, 0, .18);
+}
+
+.peipe-follow-btn.is-following {
+  background: rgba(243, 244, 246, .9);
+  color: #667085;
+  box-shadow: none;
+}
+
+.peipe-topic-bottom {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #98a2b3;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.peipe-topic-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+}
+
+.peipe-essence-toolbar {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  margin-top: 6px;
+}
+
+.peipe-essence-filter {
+  height: 32px;
+  padding: 0 13px;
+  border: 1px solid rgba(255, 209, 0, .46);
+  border-radius: 999px;
+  background: rgba(255, 248, 218, .86);
+  color: #7c5e00;
+  font-size: 13px;
+  font-weight: 850;
+  box-shadow: 0 6px 16px rgba(255, 198, 0, .10);
+}
+
+.peipe-essence-filter.active {
+  background: linear-gradient(135deg, #ffe070, #ffc600);
+  color: #111827;
+  border-color: rgba(255, 198, 0, .82);
+}
+
+.peipe-topic-hidden {
+  display: none !important;
+}
+
+.peipe-essence-empty {
+  margin: 16px 0;
+  padding: 20px 14px;
+  text-align: center;
+  border-radius: 18px;
+  background: rgba(248, 250, 252, .88);
+  color: #98a2b3;
+  font-size: 13px;
+}
+
+@media (max-width: 520px) {
+  .peipe-topic-langs {
+    display: flex;
+    margin: 4px 0 0;
+  }
+
+  .peipe-essence-toolbar {
+    width: 100%;
+    margin: 8px 0 0;
+  }
+
+  .peipe-essence-filter {
+    width: auto;
+  }
+}
