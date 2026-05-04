@@ -1,7 +1,7 @@
 {
   "id": "nodebb-plugin-haa9-experience",
   "name": "HAA9 Experience",
-  "description": "Modern category index, topic list cards, topic detail UI, translation, voice compression, and batch cached media hydration for NodeBB.",
+  "description": "Modern NodeBB UI with backend-batched Peipe profile fields, avatar flags, language chips, follow status, topic stats, and essence-tag filter.",
   "url": "https://github.com/Hurt6465-ai/nodebb-plugin-haa9-experience",
   "library": "./library.js",
   "staticDirs": {
@@ -12,7 +12,8 @@
     "public/js/x-translate-tools.js",
     "public/js/category-index.js",
     "public/js/haa9-category.js",
-    "public/js/x-topic-detail.js"
+    "public/js/x-topic-detail.js",
+    "public/js/peipe-topic-enhance.js"
   ],
   "acpScripts": [
     "public/js/admin.js"
@@ -21,7 +22,8 @@
     "public/scss/x-translate-tools.scss",
     "public/scss/category-index.scss",
     "public/scss/haa9-category.scss",
-    "public/scss/x-topic-detail.scss"
+    "public/scss/x-topic-detail.scss",
+    "public/scss/peipe-topic-enhance.scss"
   ],
   "templates": "templates",
   "languages": "languages",
@@ -54,9 +56,26 @@
     {
       "hook": "action:topic.delete",
       "method": "clearCacheOnTopic"
+    },
+    {
+      "hook": "filter:topics.get",
+      "method": "filterTopicsGet"
+    },
+    {
+      "hook": "filter:topic.get",
+      "method": "filterTopicGet"
+    },
+    {
+      "hook": "filter:topic.getPosts",
+      "method": "filterTopicGetPosts"
+    },
+    {
+      "hook": "filter:post.getPosts",
+      "method": "filterPostGetPosts"
     }
   ],
   "nbbpm": {
     "compatibility": "^3.0.0 || ^4.0.0"
-  }
+  },
+  "version": "0.4.0"
 }
