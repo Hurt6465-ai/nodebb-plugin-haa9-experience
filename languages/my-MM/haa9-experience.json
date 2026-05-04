@@ -1,0 +1,15 @@
+{
+  "peipe.essence": "အထူးရွေးချယ်ထားသော",
+  "peipe.emptyEssence": "အထူးရွေးချယ်ထားသော ပို့စ်မရှိသေးပါ",
+  "peipe.follow": "လိုက်ရန်",
+  "peipe.following": "လိုက်ထားသည်",
+  "peipe.followFail": "လိုက်၍မရပါ",
+  "peipe.unfollowFail": "မလိုက်တော့ရန် မအောင်မြင်ပါ",
+  "admin.peipe_avatar_fields": "Avatar အလံ/ဘာသာစကား အချက်အလက်ကို server-side ထည့်ရန်",
+  "admin.peipe_follow": "Follow ခလုတ်/အခြေအနေ ပြရန်",
+  "admin.peipe_topic_bottom_bar": "မှတ်ချက်/Like အောက်ခြေဘား ပြရန်",
+  "admin.essence_filter": "အထူးရွေးချယ်ထားသော filter ဖွင့်ရန်",
+  "admin.essence_tag": "အထူး tag အမည်",
+  "admin.essence_scan_limit": "အထူး scan ကန့်သတ်ချက်",
+  "admin.profile_batch_limit": "Profile batch ကန့်သတ်ချက်"
+}
