@@ -1132,3 +1132,39 @@ body.page-topic .haa9-category-toolbar {
   .haa9-category-toolbar { margin-left: 6px !important; margin-right: 6px !important; }
   .haa9-category-toolbar button span { display: inline !important; }
 }
+
+
+/* v0.4.1 cleanup: language stays on username row, no separate line outside media. */
+.haa9-user-row .haa9-lang {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 3px !important;
+  margin: 0 0 0 4px !important;
+  padding: 1px 5px !important;
+  border-radius: 999px !important;
+  background: rgba(255, 248, 218, .72) !important;
+  color: #735500 !important;
+  font-size: 10.5px !important;
+  line-height: 1 !important;
+  font-weight: 850 !important;
+  white-space: nowrap !important;
+  max-width: 46vw !important;
+  overflow: hidden !important;
+}
+.haa9-user-row .haa9-lang b {
+  font-weight: 900 !important;
+  color: #735500 !important;
+}
+.haa9-user-row .haa9-lang-arrow {
+  margin: 0 1px !important;
+  color: #c7ccd5 !important;
+  font-size: 10px !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+body.haa9-topic-detail-mode #haa9-fab,
+body.page-topic #haa9-fab {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
