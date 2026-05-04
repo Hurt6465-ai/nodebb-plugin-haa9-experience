@@ -142,3 +142,13 @@ body.haa9-categories-index-mode .haa9-native-categories-hidden {
   .haa9-cat-card, .haa9-cat-content { min-height: 242px; }
 }
 
+
+/* v0.4.1 cleanup: hero no longer carries AI/post buttons; card itself is clickable. */
+.haa9-cat-hero-actions,
+.haa9-cat-ai,
+.haa9-cat-new {
+  display: none !important;
+}
+.haa9-cat-card[data-href] {
+  cursor: pointer;
+}
