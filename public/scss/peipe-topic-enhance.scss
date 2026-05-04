@@ -1,55 +1,73 @@
 .peipe-topic-avatar-wrap {
   position: relative !important;
-  display: inline-block;
+  display: inline-block !important;
+  overflow: visible !important;
 }
 
 .peipe-topic-flag {
   position: absolute;
-  left: -3px;
+  left: -4px;
   bottom: -2px;
-  z-index: 5;
-  font-size: 17px;
+  z-index: 8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  font-size: 16px;
   line-height: 1;
   font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, .22);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .22));
   pointer-events: none;
 }
 
 .peipe-topic-langs {
   display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4px;
-  margin-left: 6px;
-  vertical-align: middle;
-}
-
-.peipe-lang-row {
-  display: inline-flex;
   align-items: center;
   gap: 3px;
+  margin-left: 6px;
+  vertical-align: middle;
+  white-space: nowrap;
+  max-width: min(46vw, 190px);
+  overflow: hidden;
+}
+
+.peipe-lang-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
   min-height: 18px;
   padding: 1px 5px;
   border-radius: 999px;
-  background: rgba(255, 209, 0, .16);
-  color: #735500;
   font-size: 10.5px;
   line-height: 1;
-  font-weight: 800;
+  font-weight: 850;
+  flex: 0 1 auto;
+  min-width: 0;
 }
 
-.peipe-lang-row.learn {
-  background: rgba(219, 234, 254, .76);
+.peipe-lang-chip b,
+.peipe-lang-chip i {
+  font-style: normal;
+  flex: 0 0 auto;
+}
+
+.peipe-lang-chip.native {
+  color: #735500;
+  background: rgba(255, 209, 0, .18);
+}
+
+.peipe-lang-chip.learn {
   color: #2563eb;
+  background: rgba(219, 234, 254, .8);
 }
 
-.peipe-lang-row b {
+.peipe-lang-arrow {
+  color: #c7ccd5;
   font-size: 10px;
   font-weight: 900;
-}
-
-.peipe-lang-row i {
-  font-style: normal;
+  flex: 0 0 auto;
 }
 
 .peipe-follow-btn {
@@ -73,40 +91,33 @@
   box-shadow: none;
 }
 
-.peipe-topic-bottom {
-  margin-top: 8px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #98a2b3;
-  font-size: 12px;
-  line-height: 1.2;
-}
-
+/* Stop the old duplicate left-side bottom stats from showing if an older bundle is cached. */
+.peipe-topic-bottom,
 .peipe-topic-stat {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  white-space: nowrap;
-}
-
-.peipe-essence-toolbar {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 8px;
-  margin-top: 6px;
+  display: none !important;
 }
 
 .peipe-essence-filter {
-  height: 32px;
-  padding: 0 13px;
-  border: 1px solid rgba(255, 209, 0, .46);
-  border-radius: 999px;
-  background: rgba(255, 248, 218, .86);
+  height: 34px;
+  min-width: 34px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 209, 0, .48);
+  border-radius: 12px;
+  background: rgba(255, 248, 218, .92);
   color: #7c5e00;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   font-size: 13px;
-  font-weight: 850;
-  box-shadow: 0 6px 16px rgba(255, 198, 0, .10);
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: 0 5px 13px rgba(255, 198, 0, .10);
+}
+
+.peipe-essence-filter em {
+  font-style: normal;
 }
 
 .peipe-essence-filter.active {
@@ -131,16 +142,10 @@
 
 @media (max-width: 520px) {
   .peipe-topic-langs {
-    display: flex;
-    margin: 4px 0 0;
+    max-width: 42vw;
   }
 
-  .peipe-essence-toolbar {
-    width: 100%;
-    margin: 8px 0 0;
-  }
-
-  .peipe-essence-filter {
-    width: auto;
+  .peipe-essence-filter em {
+    display: inline;
   }
 }
