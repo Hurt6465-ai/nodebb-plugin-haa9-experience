@@ -1,0 +1,29 @@
+{
+  "name": "nodebb-plugin-haa9-experience",
+  "version": "0.1.0",
+  "description": "nodebb帖子改造",
+  "main": "library.js",
+  "keywords": [
+    "nodebb",
+    "nodebb-plugin",
+    "forum",
+    "translation",
+    "voice",
+    "category"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hurt6465-ai/nodebb-plugin-haa9-experience.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hurt6465-ai/nodebb-plugin-haa9-experience/issues"
+  },
+  "homepage": "https://github.com/Hurt6465-ai/nodebb-plugin-haa9-experience#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "nbbpm": {
+    "compatibility": "^3.0.0 || ^4.0.0"
+  }
+}
